@@ -11,27 +11,32 @@ namespace PruebasUnidad
     {
         static void Main(string[] args)
         {
-            String ln;
-
+            string ln;
+            string[] parts = null;
             try
             {
                 StreamReader sr =
+                    //utiliza la direccion de donde se encuentra el archivo para leerlo
                 new StreamReader("C:/Users/ASKII.DESKTOP-D39ELPS/Documents/gitStuff/automatizar-pruebas-unitarias-2019-Shernandezglez/CasosPrueba.txt");
 
                 ln = sr.ReadLine();
 
-                
-                
-
+                //imprime la linea de texto mientras aun haya contenido para leer
                 while (ln != null)
                 {
                     Console.WriteLine(ln);
+                    parts = ln.Split(':');
+                    Console.WriteLine(" ");
+                    for (int i = 0; i <= parts.Length - 1; i++)
+                    {
+                        Console.WriteLine(parts[i]);
+                    }
+                    Console.WriteLine(" ");
                     ln = sr.ReadLine();
                     
                 }
-                Console.WriteLine(" ");
-                
-                
+
+                sr.Close();
                 Console.ReadLine();
             } catch (Exception e)
 
