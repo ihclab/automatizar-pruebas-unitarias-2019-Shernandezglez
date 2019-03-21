@@ -12,7 +12,7 @@ namespace AutomatizarPruebasUnitarias {
          * Calcula y regresa la media artimética prueba
          */
         public static double mediaAritmetica(params int[] vals) {}
-
+    
         /**
          * Calcula y regresa la raíz enésima = x^(1/n)
          */
