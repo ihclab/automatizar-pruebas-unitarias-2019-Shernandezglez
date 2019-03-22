@@ -1,0 +1,7 @@
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\PruebasUnidad\PruebasUnidad\bin\Debug\PruebasUnidad.exe.config
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\PruebasUnidad\PruebasUnidad\bin\Debug\PruebasUnidad.exe
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\PruebasUnidad\PruebasUnidad\bin\Debug\PruebasUnidad.pdb
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\PruebasUnidad\PruebasUnidad\obj\Debug\PruebasUnidad.csprojAssemblyReference.cache
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\PruebasUnidad\PruebasUnidad\obj\Debug\PruebasUnidad.csproj.CoreCompileInputs.cache
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\PruebasUnidad\PruebasUnidad\obj\Debug\PruebasUnidad.exe
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\PruebasUnidad\PruebasUnidad\obj\Debug\PruebasUnidad.pdb

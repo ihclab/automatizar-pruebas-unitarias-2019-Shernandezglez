@@ -3,21 +3,18 @@
 0003:mediaAritmetica:2 4 8 16 32 64:21.0000
 0004:mediaAritmetica:7 5:6.0000
 0005:mediaAritmetica:NULL:0.0000
-
 0006:mediaGeometrica:3 9 18 27 36 45:16.6438
 0007:mediaGeometrica:1:1.0000
 0008:mediaGeometrica:7 5 2:4.1212
 0009:mediaGeometrica:0 0 0 0:Exception
 0010:mediaGeometrica:NULL:0.0000
-
 0011:mediaArmonica:6 6 2:3.6
 0012:mediaArmonica:5 2 7:3.5593
 0013:mediaArmonica:8 4 7:5.7931
 0014:mediaArmonica:2 9 12:4.32
 0015:mediaArmonica:2 7 8:3.9069
-
 0016:mediaNoExiste:2 3 6:3.0320
 0017:mediaNoExiste:2 3 6:3.0320
 0018:mediaNoExiste:2 3 6:3.0320
 0019:mediaNoExiste:2 3 6:3.0320
-0030:mediaNoExiste:2 3 6:3.0320
+0020:mediaNoExiste:2 3 6:3.0320
