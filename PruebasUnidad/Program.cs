@@ -14,7 +14,7 @@ namespace PruebasUnidad
             string ln;
             string[] parts = null;
             int[] en = null;
-            double s = 0;
+            double x = 0;
             string[] ins = null;
             
             try
@@ -45,8 +45,8 @@ namespace PruebasUnidad
                     ins[1] = parts[3];
                     string c = ins[0];
                     string c2 = ins[1];
+                    double aa = double.Parse(c2);
                     
-                    s = double.Parse(c2);
                     ins = new string[c.Length];
                     ins = c.Split(' ');
                     
@@ -59,9 +59,16 @@ namespace PruebasUnidad
                         
                     }
 
-                    ln = sr.ReadLine();
+                     x = Medias.mediaAritmetica(en);
+                    
+                     if(x == aa)
+                    {
+                        Console.WriteLine("T");
+                    }
                     
                 }
+
+                
                 
                 sr.Close();
                 Console.ReadLine();

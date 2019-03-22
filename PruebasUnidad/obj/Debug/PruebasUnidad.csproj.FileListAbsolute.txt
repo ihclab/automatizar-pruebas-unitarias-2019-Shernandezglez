@@ -5,3 +5,10 @@ C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\PruebasUnidad\PruebasUnidad\obj\Debu
 C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\PruebasUnidad\PruebasUnidad\obj\Debug\PruebasUnidad.csproj.CoreCompileInputs.cache
 C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\PruebasUnidad\PruebasUnidad\obj\Debug\PruebasUnidad.exe
 C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\PruebasUnidad\PruebasUnidad\obj\Debug\PruebasUnidad.pdb
+C:\Users\ASKII.DESKTOP-D39ELPS\Documents\gitStuff\automatizar-pruebas-unitarias-2019-Shernandezglez\PruebasUnidad\bin\Debug\PruebasUnidad.exe.config
+C:\Users\ASKII.DESKTOP-D39ELPS\Documents\gitStuff\automatizar-pruebas-unitarias-2019-Shernandezglez\PruebasUnidad\bin\Debug\PruebasUnidad.exe
+C:\Users\ASKII.DESKTOP-D39ELPS\Documents\gitStuff\automatizar-pruebas-unitarias-2019-Shernandezglez\PruebasUnidad\bin\Debug\PruebasUnidad.pdb
+C:\Users\ASKII.DESKTOP-D39ELPS\Documents\gitStuff\automatizar-pruebas-unitarias-2019-Shernandezglez\PruebasUnidad\obj\Debug\PruebasUnidad.csprojAssemblyReference.cache
+C:\Users\ASKII.DESKTOP-D39ELPS\Documents\gitStuff\automatizar-pruebas-unitarias-2019-Shernandezglez\PruebasUnidad\obj\Debug\PruebasUnidad.csproj.CoreCompileInputs.cache
+C:\Users\ASKII.DESKTOP-D39ELPS\Documents\gitStuff\automatizar-pruebas-unitarias-2019-Shernandezglez\PruebasUnidad\obj\Debug\PruebasUnidad.exe
+C:\Users\ASKII.DESKTOP-D39ELPS\Documents\gitStuff\automatizar-pruebas-unitarias-2019-Shernandezglez\PruebasUnidad\obj\Debug\PruebasUnidad.pdb
