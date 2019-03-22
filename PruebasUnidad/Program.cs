@@ -41,7 +41,6 @@ namespace PruebasUnidad
                     ins = new string[2];
 
 
-
                     ins[0] = parts[2];
                     ins[1] = parts[3];
                     string c = ins[0];
