@@ -1,4 +1,4 @@
-0001:mediaAritmetica:4 2 11:5.6666
+0001:mediaAritmetica:4 2 11:5.6667
 0002:mediaAritmetica:6 8:7.0000
 0003:mediaAritmetica:2 4 8 16 32 64:21.0000
 0004:mediaAritmetica:7 5:6.0000
@@ -18,5 +18,7 @@
 0018:mediaNoExiste:2 3 6:3.0320
 0019:mediaNoExiste:2 3 6:3.0320
 0020:mediaNoExiste:2 3 6:3.0320
+
+
 
 

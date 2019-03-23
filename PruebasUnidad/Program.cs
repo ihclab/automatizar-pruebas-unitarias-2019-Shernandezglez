@@ -23,19 +23,22 @@ namespace PruebasUnidad
                     //utiliza la direccion de donde se encuentra el archivo para leerlo
                 new StreamReader("C:/Users/ASKII.DESKTOP-D39ELPS/Documents/gitStuff/automatizar-pruebas-unitarias-2019-Shernandezglez/CasosPrueba.txt");
 
-                ln = sr.ReadLine();
+                
 
                 //imprime la linea de texto mientras aun haya contenido para leer
-                while (ln != null)
+                while ((ln = sr.ReadLine()) != null)
                 {
                     Console.WriteLine(ln);
+                  
                     parts = ln.Split(':');
                     Console.WriteLine(" ");
+                    
                     for (int i = 0; i <= parts.Length-1; i++)
                     {
                         Console.WriteLine(parts[i]);
 
                     }
+                    
                     Console.WriteLine(" ");
 
                     ins = new string[2];
@@ -46,33 +49,38 @@ namespace PruebasUnidad
                     string c = ins[0];
                     string c2 = ins[1];
                     double aa = double.Parse(c2);
-                    
+
                     ins = new string[c.Length];
                     ins = c.Split(' ');
-                    
-                    
+
+
                     en = new int[ins.Length];
-                    
-                    for(int i = 0; i <= ins.Length-1; i++)
+
+                    for (int i = 0; i <= ins.Length - 1; i++)
                     {
                         en[i] = int.Parse(ins[i]);
-                        
-                    }
 
-                     x = Medias.mediaAritmetica(en);
-                    
-                     if(x == aa)
-                    {
-                        Console.WriteLine("T");
                     }
                     
+                    Console.WriteLine(" ");
+
+
+                    x = Medias.mediaAritmetica(en);
+                    x = Math.Round(x, 4);
+                    if(x == aa)
+                    {
+                        Console.WriteLine("true");
+                    }
                 }
 
                 
+
                 
+
                 sr.Close();
                 Console.ReadLine();
-            } catch (Exception e)
+            }
+            catch (Exception e)
 
             {
                 Console.WriteLine("Exception: " + e.Message);
