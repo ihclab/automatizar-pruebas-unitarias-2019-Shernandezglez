@@ -46,7 +46,11 @@ namespace PruebasUnidad
                     {
                         ins = new string[2];
 
-
+                        if (parts[2] == "NULL")
+                        {
+                            Console.WriteLine("Entradas nulas");
+                        }
+                        Console.WriteLine(" ");
                         ins[0] = parts[2];
                         ins[1] = parts[3];
                         string c = ins[0];
@@ -62,10 +66,10 @@ namespace PruebasUnidad
                         for (int i = 0; i <= ins.Length - 1; i++)
                         {
                             en[i] = int.Parse(ins[i]);
-
+                            
                         }
-
-                        Console.WriteLine(" ");
+                        
+                       
 
                         x = Medias.mediaAritmetica(en);
                         x = Math.Round(x, 4);
@@ -83,6 +87,7 @@ namespace PruebasUnidad
                            
                         }
 
+                        
 
                     }
                     catch(Exception e)
