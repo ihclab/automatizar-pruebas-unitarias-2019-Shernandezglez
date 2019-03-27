@@ -70,22 +70,32 @@ namespace PruebasUnidad
                         }
                         
                        
-
-                        x = Medias.mediaAritmetica(en);
-                        x = Math.Round(x, 4);
-                        //int cn = 0;
-
-                        if (x == aa)
+                        if(parts[1] == "mediaAritmetica")
                         {
-                            Console.WriteLine("exito");
-                            //int ex = cn + 1;
-                            
-                        }
-                        else
-                        {
-                            Console.WriteLine("fallo");
+                            x = Medias.mediaAritmetica(en);
+                            x = Math.Round(x, 4);
+
+
+                            if (x == aa)
+                            {
+
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.WriteLine("Exito");
+                                Console.ResetColor();
+                            }
                            
+                            else
+                            {
+                                Console.WriteLine("fallo");
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.ResetColor();
+                            }
                         }
+                        else if(parts[1] == "mediaGeometrica")
+                        {
+                            Console.WriteLine("prueba");
+                        }
+                        
 
                         
 
@@ -118,5 +128,7 @@ namespace PruebasUnidad
             
 
         }
+
+        
     }
 }
