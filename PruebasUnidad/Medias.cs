@@ -28,7 +28,7 @@ namespace PruebasUnidad
          */
         private static double raizEnesima(double x, int n)
         {
-            return Math.Pow(x, 1 / n);
+            return Math.Pow(x, 1 / Convert.ToDouble(n));
         }
 
         /*
@@ -41,7 +41,7 @@ namespace PruebasUnidad
             {
                 mult *= vals[i];
             }
-            return raizEnesima(mult, vals.Length);
+            return (double) raizEnesima(mult, vals.Length);
         }
 
         /*
@@ -52,7 +52,7 @@ namespace PruebasUnidad
             double sum = 0;
             for (int i = 0; i < vals.Length; i++)
             {
-                sum += 1 / vals[i];
+                sum += 1 / Convert.ToDouble(vals[i]);
             }
             return vals.Length / sum;
         }

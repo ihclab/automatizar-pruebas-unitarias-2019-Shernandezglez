@@ -14,10 +14,10 @@ namespace PruebasUnidad
             string ln;
             string[] parts = null;
             int[] en = null;
-            double x = 0;
+            
             string[] ins = null;
             double aa = 0;
-
+            Medias mds;
 
             try
             {
@@ -51,58 +51,97 @@ namespace PruebasUnidad
                             Console.WriteLine("Entradas nulas");
                         }
                         Console.WriteLine(" ");
+
                         ins[0] = parts[2];
                         ins[1] = parts[3];
                         string c = ins[0];
                         string c2 = ins[1];
-                         aa = double.Parse(c2);
+                        aa = double.Parse(c2);
 
                         ins = new string[c.Length];
                         ins = c.Split(' ');
-
+                        Console.WriteLine("----------------------------------------------------------------");
 
                         en = new int[ins.Length];
 
                         for (int i = 0; i <= ins.Length - 1; i++)
                         {
                             en[i] = int.Parse(ins[i]);
-                            
+
                         }
-                        
-                       
-                        if(parts[1] == "mediaAritmetica")
+
+
+                        if (parts[1] == "mediaAritmetica")
                         {
+                            double x = 0;
                             x = Medias.mediaAritmetica(en);
                             x = Math.Round(x, 4);
 
 
                             if (x == aa)
                             {
-
-                                Console.ForegroundColor = ConsoleColor.Green;
-                                Console.WriteLine("Exito");
+                                Console.WriteLine("Exito" + "\n", Console.ForegroundColor = ConsoleColor.Green);
                                 Console.ResetColor();
                             }
-                           
+
                             else
                             {
-                                Console.WriteLine("fallo");
-                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("Fallo" + "\n", Console.ForegroundColor = ConsoleColor.Red);
                                 Console.ResetColor();
                             }
                         }
-                        else if(parts[1] == "mediaGeometrica")
-                        {
-                            Console.WriteLine("prueba");
-                        }
-                        
 
-                        
+                        else if (parts[1] == "mediaGeometrica")
+                        {
+                            double x = 0;
+                            mds = new Medias();
+
+                            x = mds.mediaGeometrica(en);
+                            x = Math.Round(x, 4);
+                            if (x == aa)
+                            {
+
+                                Console.WriteLine("Exito" + "\n", Console.ForegroundColor = ConsoleColor.Green);
+                                Console.ResetColor();
+                            }
+
+                            else
+                            {
+                                Console.WriteLine("Fallo" + "\n", Console.ForegroundColor = ConsoleColor.Red);
+                                Console.ResetColor();
+                            }
+                        }
+                        else if (parts[1] == "mediaArmonica")
+                        {
+                            double x = 0;
+
+
+                            x = Medias.mediaArmonica(en);
+                            x = Math.Round(x, 4);
+                            if (x == aa)
+                            {
+
+                                Console.WriteLine("Exito" + "\n", Console.ForegroundColor = ConsoleColor.Green);
+                                Console.ResetColor();
+                            }
+
+                            else
+                            {
+                                Console.WriteLine("Fallo" + "\n", Console.ForegroundColor = ConsoleColor.Red);
+                                Console.ResetColor();
+                            }
+                        }
+
+
+
 
                     }
-                    catch(Exception e)
+                    catch (Exception e)
                     {
+                        Console.WriteLine("Fallo" + "\n", Console.ForegroundColor = ConsoleColor.Red);
+                        Console.ResetColor();
                         Console.WriteLine("Exception: " + e.Message);
+                        Console.WriteLine("----------------------------------------------------------------");
                     }
                     
                 }
