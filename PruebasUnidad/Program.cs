@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Diagnostics;
 
 namespace PruebasUnidad
 {
@@ -11,13 +12,20 @@ namespace PruebasUnidad
     {
         static void Main(string[] args)
         {
-            string ln;
             string[] parts = null;
             int[] en = null;
-            
             string[] ins = null;
+
+
+            string ln;
+            string otp =DateTime.Now.ToString() + "\r\n";
+     
+            int t = 0;
+            int tf = 0;
             double aa = 0;
+
             Medias mds;
+            Stopwatch zw = new Stopwatch();
 
             try
             {
@@ -30,18 +38,21 @@ namespace PruebasUnidad
                 //imprime la linea de texto mientras aun haya contenido para leer
                 while ((ln = sr.ReadLine()) != null)
                 {
-                    Console.WriteLine(ln);
-                  
-                    parts = ln.Split(':');
-                    Console.WriteLine(" ");
-                    
-                    for (int i = 0; i <= parts.Length-1; i++)
-                    {
-                        Console.WriteLine(parts[i]);
 
-                    }
+                    zw.Start();
+                    parts = ln.Split(':');
+                    Console.WriteLine(ln);
+                    otp += ln + ":";
+                  
+                    //Console.WriteLine(" ");
                     
-                    Console.WriteLine(" ");
+                    //for (int i = 0; i <= parts.Length-1; i++)
+                    //{
+                    //    Console.WriteLine(parts[i]);
+
+                    //}
+                    
+                 
                     try
                     {
                         ins = new string[2];
@@ -50,7 +61,7 @@ namespace PruebasUnidad
                         {
                             Console.WriteLine("Entradas nulas");
                         }
-                        Console.WriteLine(" ");
+              
 
                         ins[0] = parts[2];
                         ins[1] = parts[3];
@@ -60,7 +71,7 @@ namespace PruebasUnidad
 
                         ins = new string[c.Length];
                         ins = c.Split(' ');
-                        Console.WriteLine("----------------------------------------------------------------");
+                        
 
                         en = new int[ins.Length];
 
@@ -76,19 +87,24 @@ namespace PruebasUnidad
                             double x = 0;
                             x = Medias.mediaAritmetica(en);
                             x = Math.Round(x, 4);
-
+                            otp += " " + "Calculo: " + x;
 
                             if (x == aa)
                             {
-                                Console.WriteLine("Exito" + "\n", Console.ForegroundColor = ConsoleColor.Green);
+                                Console.WriteLine("Exito", Console.ForegroundColor = ConsoleColor.Green);
                                 Console.ResetColor();
+                                otp += " " + "Resultado: " + " Exito";                               
+                                t += 1;
                             }
 
                             else
                             {
-                                Console.WriteLine("Fallo" + "\n", Console.ForegroundColor = ConsoleColor.Red);
+                                Console.WriteLine("Fallo" , Console.ForegroundColor = ConsoleColor.Red);
                                 Console.ResetColor();
+                                otp += " " + "Resultado: " + " Fallo";
+                                tf += 1;
                             }
+                            
                         }
 
                         else if (parts[1] == "mediaGeometrica")
@@ -98,18 +114,25 @@ namespace PruebasUnidad
 
                             x = mds.mediaGeometrica(en);
                             x = Math.Round(x, 4);
+                            otp += " " + "Calculo: " + x;
                             if (x == aa)
                             {
 
-                                Console.WriteLine("Exito" + "\n", Console.ForegroundColor = ConsoleColor.Green);
+                                Console.WriteLine("Exito" , Console.ForegroundColor = ConsoleColor.Green);
                                 Console.ResetColor();
+                                otp += " " + "Resultado: " + " Exito";
+                                t += 1;
                             }
 
                             else
                             {
-                                Console.WriteLine("Fallo" + "\n", Console.ForegroundColor = ConsoleColor.Red);
+                                Console.WriteLine("Fallo" , Console.ForegroundColor = ConsoleColor.Red);
                                 Console.ResetColor();
+                                otp += " " + "Resultado: " + " Fallo";
+                                tf += 1;
                             }
+
+                            
                         }
                         else if (parts[1] == "mediaArmonica")
                         {
@@ -118,18 +141,25 @@ namespace PruebasUnidad
 
                             x = Medias.mediaArmonica(en);
                             x = Math.Round(x, 4);
+                            otp += " " + "Calculo: " + x;
                             if (x == aa)
                             {
 
-                                Console.WriteLine("Exito" + "\n", Console.ForegroundColor = ConsoleColor.Green);
+                                Console.WriteLine("Exito" , Console.ForegroundColor = ConsoleColor.Green);
                                 Console.ResetColor();
+                                otp += " " + "Resultado: " + " Exito";
+                                t += 1;
                             }
 
                             else
                             {
-                                Console.WriteLine("Fallo" + "\n", Console.ForegroundColor = ConsoleColor.Red);
+                                Console.WriteLine("Fallo", Console.ForegroundColor = ConsoleColor.Red);
                                 Console.ResetColor();
+                                otp += " " + "Resultado: " + " Fallo";
+                                tf += 1;
                             }
+
+                            
                         }
 
 
@@ -138,15 +168,24 @@ namespace PruebasUnidad
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine("Fallo" + "\n", Console.ForegroundColor = ConsoleColor.Red);
+                        Console.WriteLine("Fallo", Console.ForegroundColor = ConsoleColor.Red);
                         Console.ResetColor();
-                        Console.WriteLine("Exception: " + e.Message);
-                        Console.WriteLine("----------------------------------------------------------------");
+                        Console.WriteLine("Excepcion de salida");
+                        otp += " " + "Resultado: " + " Excepcion";
+                        tf += 1;
+                       
+                        
                     }
+                    zw.Stop();
+                    Console.WriteLine("Tiempo: " + zw.Elapsed);
+                    Console.WriteLine("--------------------------------------------------------------");
+                    otp += " " + "Tiempo de ejecucion: " + zw.Elapsed + "\r\n";
+                    zw.Reset();
                     
                 }
 
-
+                Console.WriteLine("Fin de la prueba" + "\n" + "-----------------------------------------------------------");
+                Console.WriteLine("Exitos: " + t.ToString() + "\n" + "Fallos: " + tf.ToString());
 
                
 
@@ -154,20 +193,27 @@ namespace PruebasUnidad
 
                
                 Console.ReadLine();
+
+                
             }
             catch (Exception e)
 
             {
                 Console.WriteLine("Exception: " + e.Message);
             }
+
             Console.WriteLine("Executing finally block.");
 
+            using (StreamWriter swt = new StreamWriter("C:/Users/ASKII.DESKTOP-D39ELPS/Documents/gitStuff/Pruebas.txt"))
+            {
+                swt.WriteLine(otp);
+            }
 
-            
-            
+
+
 
         }
 
-        
+
     }
 }
